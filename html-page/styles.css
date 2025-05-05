@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    background-color: #f4f4f9; /* Subtle background color for overall design */
+    color: #333; /* Main text color for readability */
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.header ul {
+    list-style-type: none;
+    display: flex; /* Changed to flexbox for better control */
+    justify-content: flex-end; /* Align items to the right */
+    padding: 10px 20px; /* Adjusted padding for better appearance */
+    background-color: #333;
+    margin: 0;
+}
+
+.header ul li {
+    text-align: center;
+    margin: 0 10px; /* Added spacing between items */
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px; /* Improved padding for touch-friendly design */
+    border-radius: 5px; /* Rounded corners for modern look */
+}
+
+.header ul li a:hover {
+    background-color: #ff4500; /* Changed hover color to a more vibrant tone */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 4fr; /* Adjusted proportions for better balance */
+    gap: 20px; /* Increased gap for clear layout */
+    padding: 20px;
+}
+
+.left-col,
+.right-col {
+    background-color: #eee; 
+    padding: 20px;
+    border-radius: 30px;
+}
+
+form div {
+    margin-bottom: 15px; 
+}
+
+form div input[type=text], [type=password]{
+    display:block;
+    border:1px solid black;
+    padding:7px;
+    width:40%;
+}
+
+form div input[type=submit]{
+    display:block;
+    border:1px solid black;
+    padding:7px;
+    width:20%;
+    background:burlywood;
+    color:brown;
+    font-weight: 800;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px; 
+    text-transform: uppercase;
+}
+
+.active {
+    background-color: red;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Responsive style for devices with max width of 600px */
+@media (max-width: 600px) {
+    .header ul {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center menu items */
+        gap: 10px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+}
